@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <h1>FWI Prediction</h1>
+        <!--Main input for receiving query to our ML -->
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+        
+        <label>Temperature (°C)
+            <input type="number" step="any" name="Temperature" placeholder="e.g., 25.5" required>
+        </label><br>
+        
+        <label>Relative Humidity (%)
+            <input type="number" name="RH" placeholder="e.g., 60" required>
+        </label><br>
+
+        <label>Wind Speed (km/h)
+            <input type="number" name="Ws" placeholder="e.g., 15" required>
+        </label><br>
+
+        <label>Rain (mm)
+            <input type="number" step="any" name="Rain" placeholder="e.g., 1.2" required>
+        </label><br>
+
+        <label>FFMC
+            <input type="number" step="any" name="FFMC" placeholder="e.g., 85.2" required>
+        </label><br>
+        
+        <label>DMC
+            <input type="number" step="any" name="DMC" placeholder="e.g., 16.5" required>
+        </label><br>
+
+        <label>ISI
+            <input type="number" step="any" name="ISI" placeholder="e.g., 7.1" required>
+        </label><br>
+
+        <label for="Classes">Class:</label>
+        <select id="Classes" name="Classes" required>
+            <option value="1">Fire</option>
+            <option value="0">Not Fire</option>
+        </select><br>
+
+        <label for="Region">Region:</label>
+        <select id="Region" name="Region" required>
+            <option value="1">Sidi-Bel Abbes</option>
+            <option value="0">Bejaia</option>
+        </select><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+            <h2>
+                The FWI prediction is: {{prediction}}
+            </h2>
+        
+    </div>
+</body>
+</html>
