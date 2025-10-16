@@ -88,6 +88,4 @@ This application is deployed on **Render** using a `Procfile` to run a Gunicorn 
 
 -   This project uses the [Algerian Forest Fires Dataset](https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset) from the UCI Machine Learning Repository.
 
-## 🙏 Acknowledgements
 
--   This project uses the [Algerian Forest Fires Dataset](https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset) from the UCI Machine Learning Repository.
